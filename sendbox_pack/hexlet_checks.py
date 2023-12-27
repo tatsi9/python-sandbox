@@ -1,7 +1,8 @@
 from hexlet_tasks import *
 
 
-# print(is_palindrome("ишак ищет у тещи каши"))
+print(is_palindrome("ишак ищет у тещи каши"))
+
 # print(filter_string("A     N aS ta sia   ", "a"))
 # print(has_char("Anastasia", "n"))
 # print(my_substr_1("string", 3))

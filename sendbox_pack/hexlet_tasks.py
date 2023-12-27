@@ -1,3 +1,73 @@
+from symbols import *
+from random import randint
+
+def is_happy_ticket(ticket_num: str) -> bool:
+    """
+    Happy number is a number which has sum of a half symbols equal to sum of the second half
+    number is always string, can have any length but always odd.
+    """
+    sum_first = 0
+    sum_second = 0
+    i = 0
+
+    while i < len(ticket_num):
+        num = int(ticket_num[i])
+        #print("Curent num:", num)
+        if i < (len(ticket_num) / 2):
+            sum_first = sum_first + num
+            #print("Current sum_first:", sum_first)
+        else:
+            sum_second = sum_second + num
+            #print("Current sum_second:", sum_second)
+        i += 1
+    if sum_first == sum_second:
+        return True
+    return False
+
+
+print(is_happy_ticket("12344234"))
+
+def sort_pair(pair):
+    """
+    the function sorts a pair of numbers ASC
+    returns an array of 2 sorted numbers
+    """
+    a, b = pair
+    if a > b:
+        return (b, a)
+    return (a, b)
+
+print(sort_pair((5, 3)))
+
+def choice_from_range(string: str, index_first: int, index_last: int) -> str:
+    """
+    the function returns
+    a random sym from the ranged str
+    """
+    index = randint(index_first, index_last)
+    sym = string[index]
+    return sym
+
+# print(choice_from_range("abcdefj", 0, 6))
+
+
+def count_vowels(string: str) -> int:
+    """
+    the function counts
+    vowels in the string
+    """
+    i = 0
+    result = 0
+    string = string.lower()
+    while i < len(string):
+        if is_vowel(string[i]):
+            result += 1
+        i += 1
+    return result
+
+#print(count_vowels("One two three"))
+
+
 def is_palindrome(string: str) -> bool:
     """
     the function check
