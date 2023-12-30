@@ -1,6 +1,7 @@
 from symbols import *
 from random import randint
 
+
 def is_happy_ticket(ticket_num: str) -> bool:
     """
     Happy number is a number which has sum of a half symbols equal to sum of the second half
@@ -12,13 +13,13 @@ def is_happy_ticket(ticket_num: str) -> bool:
 
     while i < len(ticket_num):
         num = int(ticket_num[i])
-        #print("Curent num:", num)
+        # print("Curent num:", num)
         if i < (len(ticket_num) / 2):
             sum_first = sum_first + num
-            #print("Current sum_first:", sum_first)
+            # print("Current sum_first:", sum_first)
         else:
             sum_second = sum_second + num
-            #print("Current sum_second:", sum_second)
+            # print("Current sum_second:", sum_second)
         i += 1
     if sum_first == sum_second:
         return True
@@ -27,6 +28,7 @@ def is_happy_ticket(ticket_num: str) -> bool:
 
 print(is_happy_ticket("12344234"))
 
+
 def sort_pair(pair):
     """
     the function sorts a pair of numbers ASC
@@ -34,10 +36,12 @@ def sort_pair(pair):
     """
     a, b = pair
     if a > b:
-        return (b, a)
-    return (a, b)
+        return b, a
+    return a, b
+
 
 print(sort_pair((5, 3)))
+
 
 def choice_from_range(string: str, index_first: int, index_last: int) -> str:
     """
@@ -65,7 +69,7 @@ def count_vowels(string: str) -> int:
         i += 1
     return result
 
-#print(count_vowels("One two three"))
+# print(count_vowels("One two three"))
 
 
 def is_palindrome(string: str) -> bool:
@@ -112,7 +116,7 @@ def has_char(string: str, sym: str) -> bool:
         i += 1
     return False
 
-#print(has_char("Anastasia", "n"))
+# print(has_char("Anastasia", "n"))
 
 
 def my_substr_1(string: str, length: int) -> str:
@@ -285,12 +289,12 @@ def get_hidden_card(card_number_str, index=4):
 # print(get_hidden_card('1234567812345678', 3))
 
 
-def truncate(str, index):
+def truncate(string, index):
     """
     The function returns substring
     from 0 to index with "..."
     """
-    result_str = f'{str[0:index]}...'
+    result_str = f'{string[0:index]}...'
     return result_str
 
 # print(truncate('hexlet', 2))
@@ -304,8 +308,9 @@ def sum_module(nu1, nu2):
     result = abs(nu1 + nu2)
     return result
 
-num1 = -1
-num2 = 2
+
+numb1 = -1
+numb2 = 2
 # print(sum_module(num1, num2))
 
 
