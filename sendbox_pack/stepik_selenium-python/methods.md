@@ -1,9 +1,11 @@
 import time
 from selenium import webdriver
-# импортируем класс By, который позволяет выбрать способ поиска элемента
-
+# Импортируем класс By, который позволяет выбрать способ поиска элемента
 from selenium.webdriver.common.by import By
 # Webdriver это и есть набор команд для управления браузером
+from selenium.webdriver.support.ui import Select
+# Импортируем метод для работы со списками
+
 
 driver = webdriver.Chrome()
 # Инициализируем драйвер браузера. После этой команды вы должны увидеть новое открытое окно браузера
@@ -37,19 +39,24 @@ option1.click()
 
 browser.find_element(By.TAG_NAME, "select").click()
 browser.find_element(By.CSS_SELECTOR, "option:nth-child(2)").click()
+browser.find_element(By.CSS_SELECTOR, "[value='1']").click()
+## Выбрать выпадающий список и поинт - стандартные методы без импорта 
 
 from selenium.webdriver.support.ui import Select
 select = Select(browser.find_element(By.TAG_NAME, "select"))
 select.select_by_value("1") # ищем элемент с текстом "Python"
-
 select.select_by_visible_text("text")
 select.select_by_visible_text("Python") -- ищет элемент по видимому тексту
 select.select_by_index(1) -- ищет элемент по его индексу или порядковому номеру (с нуля)
-
-## Выбрать выпадающий список и поинт
+## Выбрать выпадающий список и поинт - етоды с импортом
 
 o = Options()
 o.add_experimental_option("detach", True)
-## и когда инициализируешь переменную, в скобках добавляешь опцию
+## И когда инициализируешь переменную, в скобках добавляешь опцию
 browser = webdriver.Chrome(options=o)
-## оставляет браузер открытым
+## Оставляет браузер открытым
+
+
+browser.execute_script("alert('Robots at work');")
+browser.execute_script("document.title='Script executing';")
+browser.execute_script("document.title='Script executing';alert('Robots at work');")
