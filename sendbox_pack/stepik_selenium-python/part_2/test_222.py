@@ -2,9 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+"""
+Пример использования execute_script
+"""
+
 browser = webdriver.Chrome()
-link = "https://SunInJuly.github.io/execute_script.html"
-browser.get(link)
+browser.get("https://SunInJuly.github.io/execute_script.html")
 time.sleep(4)
 
 button = browser.find_element(By.TAG_NAME, "button")

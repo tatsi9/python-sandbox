@@ -17,5 +17,5 @@ print(os.path.abspath(os.path.dirname(__file__)))  # возвращает пут
 
 
 
-#os.path.exists("/sendbox_pack/stepik_selenium-python/file.txt")  # говорит, существует ли такой путь (к файлу)
-#print(os.path.exists("/sendbox_pack/stepik_selenium-python/file.txt"))
+#os.path.exists("/sendbox_pack/stepik_selenium-python/part_2/file.txt")  # говорит, существует ли такой путь (к файлу)
+#print(os.path.exists("/sendbox_pack/stepik_selenium-python/part_2/file.txt"))

@@ -2,10 +2,18 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+"""
+Задача из test_168
+решенная неверно (сеелкторы не уникальны, пропущен дефект с исчезнувшим полем ввода )
+
+"""
+
+link1 = "https://suninjuly.github.io/registration1.html"
+link2 = "https://suninjuly.github.io/registration2.html"
+
 try:
-    link = "https://suninjuly.github.io/registration1.html"
     browser = webdriver.Chrome()
-    browser.get(link)
+    browser.get(link1)
 
     # Ваш код, который заполняет обязательные поля
     input_name = browser.find_element(By.CSS_SELECTOR, "div.first_block > div.first_class > input")

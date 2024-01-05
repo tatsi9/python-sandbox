@@ -4,16 +4,17 @@ import time
 import os
 
 """
+Прикрепление файла
+
 1. Открыть страницу http://suninjuly.github.io/file_input.html
 2. Заполнить текстовые поля: имя, фамилия, email
 3. Загрузить файл. Файл должен иметь расширение .txt и может быть пустым
 4. Нажать кнопку "Submit"
-
 """
 
 try:
-    browser = webdriver.Chrome()  # Инициализируем драйвер браузера == новое открытое окно браузера
-    browser.get("http://suninjuly.github.io/file_input.html")  # Метод get сообщает браузеру, что нужно открыть сайт по указанной ссылке
+    browser = webdriver.Chrome()
+    browser.get("http://suninjuly.github.io/file_input.html")
 
     input_fname = browser.find_element(By.NAME, "firstname")
     input_fname.send_keys("Поньк")

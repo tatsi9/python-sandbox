@@ -2,6 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time 
 
+"""
+Заполнение формы регистрации
+"""
+
 link = "http://suninjuly.github.io/simple_form_find_task.html"
 
 try:
@@ -25,5 +29,3 @@ finally:
     # закрываем браузер после всех манипуляций
     browser.quit()
 
-# не забываем оставить пустую строку в конце файла
-# value1, value2 -- значения нужно заключать в кавычки, т.к. они должны передаваться в виде строки.

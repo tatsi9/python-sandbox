@@ -2,6 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+"""
+Пример использования get_attribute
+"""
 
 try:
     link = "https://suninjuly.github.io/math.html"

@@ -2,11 +2,19 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
-link =  "http://suninjuly.github.io/find_xpath_form"
+"""
+Заполнение оч длинной формы - обращение по XPath
+
+1. В коде из шага 4 замените ссылку на  http://suninjuly.github.io/find_xpath_form.
+2. Подберите уникальный XPath-селектор так, чтобы он находил только кнопку с текстом Submit. 
+    XPath можете формулировать как угодно (по тексту, по структуре, по атрибутам) - главное, чтобы он работал.
+3. Модифицируйте код из шага 3 таким образом, чтобы поиск кнопки происходил с помощью XPath.
+4. Запустите ваш код.
+"""
 
 try:
     browser = webdriver.Chrome()
-    browser.get(link)
+    browser.get("http://suninjuly.github.io/find_xpath_form")
 
     input1 = browser.find_element(By.TAG_NAME, "input")
     input1.send_keys("Ivan")

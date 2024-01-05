@@ -1,2 +1,2 @@
 My path is
-/Users/user/PycharmProjects/ann1/sendbox_pack/stepik_selenium-python/file.txt
+/Users/user/PycharmProjects/ann1/sendbox_pack/stepik_selenium-python/part_2/file.txt

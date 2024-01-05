@@ -1,16 +1,16 @@
-"""
-Работа со списками
-1. Открыть страницу https://suninjuly.github.io/selects1.html
-2. Посчитать сумму заданных чисел
-3. Выбрать в выпадающем списке значение равное рассчитанной сумме
-4. Нажать кнопку "Submit"
-"""
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 import time
 
+"""
+Работа со списками
+
+1. Открыть страницу https://suninjuly.github.io/selects1.html
+2. Посчитать сумму заданных чисел
+3. Выбрать в выпадающем списке значение равное рассчитанной сумме
+4. Нажать кнопку "Submit"
+"""
 
 try:
     link = "https://suninjuly.github.io/selects1.html"
